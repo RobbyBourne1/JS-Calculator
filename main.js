@@ -7,8 +7,9 @@ const equal = document.getElementsByName('Equal')
 // Getting the clicks to print to output
 let x = 0
 let y = 0
+let operation = 0
 
-console.log(5 + 5)
+console.log(5 / 5)
 
 numbers.forEach(num => {
   num.addEventListener('click', function(event) {
@@ -20,6 +21,8 @@ numbers.forEach(num => {
 operators.forEach(operator => {
   operator.addEventListener('click', function(event) {
     x = output.textContent
+    output.textContent = event.target.value
+    operation = event.target.value
     output.textContent = ''
   })
 })
@@ -33,6 +36,6 @@ clear.forEach(empty => {
 equal.forEach(solve => {
   solve.addEventListener('click', function(event) {
     y = output.textContent
-    output.textContent = +x + +y
+    output.textContent = +x + operation + +y
   })
 })
