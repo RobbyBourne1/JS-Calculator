@@ -1,15 +1,13 @@
 const numbers = document.getElementsByName('button')
 const output = document.querySelector('p')
 const operators = document.getElementsByName('Operator')
-const clear = document.getElementsByName('Clear')
+const clear = document.querySelector('.buttonC')
 const equal = document.getElementsByName('Equal')
 
 // Getting the clicks to print to output
 let x = 0
 let y = 0
 let operation = 0
-
-console.log(5 / 5)
 
 numbers.forEach(num => {
   num.addEventListener('click', function(event) {
@@ -27,13 +25,11 @@ operators.forEach(operator => {
   })
 })
 
-clear.forEach(empty => {
-  empty.addEventListener('click', function(event) {
-    output.textContent = ''
-    x = 0
-    y = 0
-    console.log(x)
-  })
+clear.addEventListener('click', function(event) {
+  output.textContent = ''
+  x = 0
+  y = 0
+  console.log(x + y)
 })
 
 equal.forEach(solve => {
