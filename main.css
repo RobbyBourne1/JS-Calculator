@@ -9,6 +9,7 @@ body {
   flex-flow: column wrap;
   background-color: #45ccd5;
   border: .5px solid black;
+  width: 18em;
 }
 
 .row1,
@@ -41,6 +42,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex-basis: 75%;
 }
 
 .row1 {

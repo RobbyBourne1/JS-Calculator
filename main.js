@@ -31,6 +31,7 @@ clear.forEach(empty => {
   empty.addEventListener('click', function(event) {
     output.textContent = ''
     x = 0
+    y = 0
     console.log(x)
   })
 })
@@ -39,13 +40,13 @@ equal.forEach(solve => {
   solve.addEventListener('click', function(event) {
     y = output.textContent
     if (operation === '*') {
-      output.textContent = +x * y
+      output.textContent = +x * +y
     } else if (operation === '/') {
-      output.textContent = +x / y
+      output.textContent = +x / +y
     } else if (operation === '+') {
-      output.textContent = +x + y
+      output.textContent = +x + +y
     } else if (operation === '-') {
-      output.textContent = +x - y
+      output.textContent = +x - +y
     } else {
       x = output.textContent
       output.textContent = x
