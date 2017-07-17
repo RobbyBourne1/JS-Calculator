@@ -30,12 +30,25 @@ operators.forEach(operator => {
 clear.forEach(empty => {
   empty.addEventListener('click', function(event) {
     output.textContent = ''
+    x = 0
+    console.log(x)
   })
 })
 
 equal.forEach(solve => {
   solve.addEventListener('click', function(event) {
     y = output.textContent
-    output.textContent = +x + operation + +y
+    if (operation === '*') {
+      output.textContent = +x * y
+    } else if (operation === '/') {
+      output.textContent = +x / y
+    } else if (operation === '+') {
+      output.textContent = +x + y
+    } else if (operation === '-') {
+      output.textContent = +x - y
+    } else {
+      x = output.textContent
+      output.textContent = x
+    }
   })
 })
