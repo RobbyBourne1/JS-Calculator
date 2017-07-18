@@ -34,32 +34,31 @@ clear.addEventListener('click', function(event) {
 
 equal.addEventListener('click', function(event) {
   y = output.textContent
-  // switch (operation) {
-  //   case '*'
-  //     output.textContent = +x * y
-  //     break;
-  //   case '+'
-  //     return +x + +y
-  //     break;
-  //   case '-'
-  //     return +x - +y
-  //     break;
-  //   case '/'
-  //     return +x / +y
-  //     break;
-  //   default:
-  //
-  // }
-  if (operation === '*') {
-    output.textContent = +x * +y
-  } else if (operation === '/') {
-    output.textContent = +x / +y
-  } else if (operation === '+') {
-    output.textContent = +x + +y
-  } else if (operation === '-') {
-    output.textContent = +x - +y
-  } else {
-    x = output.textContent
-    output.textContent = x
+  switch (operation) {
+    case '*':
+      output.textContent = +x * +y
+      break
+    case '+':
+      output.textContent = +x + +y
+      break
+    case '-':
+      output.textContent = +x - +y
+      break
+    case '/':
+      output.textContent = +x / +y
+      break
+    default:
   }
+  // if (operation === '*') {
+  //   output.textContent = +x * +y
+  // } else if (operation === '/') {
+  //   output.textContent = +x / +y
+  // } else if (operation === '+') {
+  //   output.textContent = +x + +y
+  // } else if (operation === '-') {
+  //   output.textContent = +x - +y
+  // } else {
+  //   x = output.textContent
+  //   output.textContent = x
+  // }
 })
