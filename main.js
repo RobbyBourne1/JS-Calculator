@@ -3,6 +3,7 @@ const output = document.querySelector('p')
 const operators = document.getElementsByName('Operator')
 const clear = document.querySelector('.buttonC')
 const equal = document.querySelector('.buttonEq')
+const sqrt = document.querySelector('.buttonSqrt')
 
 // Getting the clicks to print to output
 let x = 0
@@ -32,6 +33,11 @@ clear.addEventListener('click', function(event) {
   console.log(x + y)
 })
 
+sqrt.addEventListener('click', function(event) {
+  output.textContent = '√'
+  operation = output.textContent
+})
+
 equal.addEventListener('click', function(event) {
   y = output.textContent
   switch (operation) {
@@ -47,7 +53,11 @@ equal.addEventListener('click', function(event) {
     case '/':
       output.textContent = +x / +y
       break
+    case '√':
+      output.textContent = Math.sqrt(x)
     default:
+      x = output.textContent
+      output.textContent = x
   }
   // if (operation === '*') {
   //   output.textContent = +x * +y
