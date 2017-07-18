@@ -34,8 +34,8 @@ clear.addEventListener('click', function(event) {
 })
 
 sqrt.addEventListener('click', function(event) {
-  output.textContent = '√'
-  operation = output.textContent
+  output.textContent = '√' + x
+  operation = '√'
 })
 
 equal.addEventListener('click', function(event) {
