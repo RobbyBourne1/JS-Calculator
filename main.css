@@ -34,7 +34,8 @@ button {
 .buttonDiv,
 .buttonMult,
 .buttonSub,
-.buttonPlus {
+.buttonPlus,
+.buttonSqrt {
   background-color: #87dbe7;
 }
 
@@ -46,5 +47,8 @@ p {
   flex-basis: 75%;
 }
 
-.row1 {
+.buttonEq {
+  flex-basis: 50%;
+  color: white;
+  background-color: #0003ff;
 }
